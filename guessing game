@@ -1,0 +1,61 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    
+
+    // varible delcartion
+  int maxNumber = 50; 
+  double Guess = 0;
+  double score,answer;
+  double track = 0;
+  string input;
+ 
+ // Random delcartion
+  Random random = new Random();
+  answer = random.Next(maxNumber);
+
+
+  
+    Console.WriteLine("Guess the number\n"+"The number is between1 and {0}", maxNumber);
+
+
+    while (Guess != answer)
+    {
+      track++;
+     
+      Console.WriteLine("Guess your number!");
+      input = Console.ReadLine();
+    Guess = double.Parse(input);
+
+      if  (Guess > answer)
+      {
+          Console.WriteLine("{0} is to high ",Guess);
+        
+      }
+      else if (Guess < answer)
+      {
+        Console.WriteLine("{0} is to low",Guess);
+
+      }
+      else 
+      {
+        Console.WriteLine("{0} is correct!",Guess);
+         score = 50 - track;
+
+        Console.WriteLine("you scored {0} points",score);
+
+      }
+
+
+    }
+
+    
+  
+
+  
+  
+  
+  
+  } 
+}
